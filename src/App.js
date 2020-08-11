@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import Features from './componenets/Features';
 import Cart from './componenets/Cart';
-// Normalizes string as a slug - a string that is safe to use
-// in both URLs and html attributes
 
 import './App.css';
 
-// This object will allow us to
-// easily convert numbers into US dollar values
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
@@ -51,7 +47,6 @@ class App extends Component {
         </header>
         <main>
           <Features
-            features={this.props.features}
             selected={this.state.selected}
             updateFeature={this.updateFeature}
             currencyFormat={USCurrencyFormat}
